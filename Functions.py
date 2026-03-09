@@ -24,26 +24,6 @@ gamma_M  = C_M / C_RB
 gamma_RR = C_RR / C_RB
 
 
-def DN(Pf):
-    return Pf * (1 + gamma_HL)
-
-def RR(Pf):
-    return Pf*gamma_RR / Pf
-
-
-def M(Pf):
-
-    pi_great = 0.020864 / (1-Pf)      # this is approx 0 # P_F should be Pf but just chec
-    pi_low = 0.170729 / Pf
-    
-    return Pf * (1 + pi_low * gamma_HL - pi_great * gamma_CB) + gamma_M + gamma_CB * pi_great
-
-
-def M_p(Pf, pi_great, pi_low):
-
-    return Pf * (1 + pi_low * gamma_HL - pi_great * gamma_CB) + gamma_M + gamma_CB * pi_great
-
-
 def run_DT_failure_model(
     waterlevel_file,
     y0,
@@ -218,6 +198,26 @@ def run_DT_failure_model(
 
     
     #DF_list = #np.linspace(0.00001, 3.9, N_MC)
+    
+    def DN(Pf):
+        return Pf * (1 + gamma_HL)
+
+    def RR(Pf):
+        return Pf*gamma_RR / Pf
+
+
+    def M(Pf):
+
+        pi_great = 0.020864 / (1-Pf_prior)     
+        pi_low = 0.170729 / Pf_prior
+        
+        return Pf * (1 + pi_low * gamma_HL - pi_great * gamma_CB) + gamma_M + gamma_CB * pi_great
+
+
+    def M_p(Pf, pi_great, pi_low):
+
+        return Pf * (1 + pi_low * gamma_HL - pi_great * gamma_CB) + gamma_M + gamma_CB * pi_great
+    
 
     
     for DF in DF_list:
