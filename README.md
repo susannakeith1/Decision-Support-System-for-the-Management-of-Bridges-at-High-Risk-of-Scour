@@ -87,13 +87,6 @@ r, Pf_prior, E_Pf_post, P_fail_post, DF_list = run_DT_failure_model(
     sigma_ln_DF=0.703
 )
 ```
-
-
-    
-![png](output_1_0.png)
-    
-
-
 This function returns:
 - `r` - dictionary containing all the decision analysis and Value of Information results. 
 - `Pf_prior` - probability of failure in the prior case
