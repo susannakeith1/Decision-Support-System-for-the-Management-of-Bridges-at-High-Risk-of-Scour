@@ -13,9 +13,9 @@ from scipy.stats import lognorm, expon
 
 C_HL = 3000000   # human loss              £3 million
 C_RB = 2000000   # rebuild bridge          £2 million
-C_CB = 15000     # close bridge (~3 days)  £5000 per day?
+C_CB = 15000     # close bridge (~3 days)  £5000 per day
 C_M  = 10000     # monitoring              £10,000   
-C_RR = 40000     # riprap                  £30,000
+C_RR = 40000     # riprap                  £40,000
 
 # Normalising all costs to cost of rebuilding the bridge
 gamma_HL = C_HL / C_RB
