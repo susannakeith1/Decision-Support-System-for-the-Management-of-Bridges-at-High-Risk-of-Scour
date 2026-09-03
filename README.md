@@ -113,26 +113,24 @@ Example output structure:
 ```
 Prior
 ------------------------------
-Pf_prior               : 0.17459
-pi_great               : 0.02528
-pi_low                 : 0.97791
-EC_M                   : 0.43584
-EC_DN_prior            : 0.43647
-EC_RR_prior            : 0.02000
-EC_prior               : 0.02000
+Pf_prior               : 0.01768
+EC_M                   : 1.63174
+EC_DN_prior            : 1.59667
+EC_RR_prior            : 0.04000
+EC_prior               : 0.04000
 
 Posterior
 ------------------------------
-Expected_Pf_Post       : 0.17446
-EC_pp                  : 0.01405
-Number of optimal DN   : 7267
+Expected_Pf_Post       : 0.01775
+EC_pp                  : 0.01364
+Number of optimal DN   : 14034
 Number of optimal M    : 0
-Number of optimal RR   : 12733
+Number of optimal RR   : 5966
 
 VoI
 ------------------------------
-VoI                    : 0.00595
-VoI £                  : 12000
+VoI                    : 0.0264
+VoI £                  : 52800
 ```
 
 
